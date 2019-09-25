@@ -13,5 +13,5 @@ VALUES
  'FOMO burger', false
 ),
 (
-    'BB King Burger'. false
+    'BB King Burger', false
 )
