@@ -7,6 +7,10 @@ var PORT = process.env.PORT || 8080;
 
 // Create express app instance.
 var app = express();
+// Serve static content for the app from the "public" directory in the application directory.
+// Static files include: client side javascript, css, and images
+// express.static is provided the relative path for our public folder
+app.use(express.static('public'));
 /*
 MIDDLEWARE FUNCTIONS
 Parse application body as JSON
@@ -24,6 +28,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 // when we run res.render('index'), express knows to look in our views folder for an index.handlers
 app.set("view engine", "handlebars");
 
+const router = require('./controllers/burgers_controller.js');
+app.use(router);
 
 // Starts the server to begin listening
 // =============================================================

@@ -13,7 +13,7 @@ var burger = {
     },
     //expecting val to be a boolean 
     updateOne: (col, val, id, cb) => {
-        orm.updateOne('burger', col, val, id, (res) =>{
+        orm.updateOne('burgers', col, val, id, (res) =>{
             cb(res);
         })
     }
