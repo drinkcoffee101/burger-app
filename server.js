@@ -10,7 +10,7 @@ var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 // Static files include: client side javascript, css, and images
 // express.static is provided the relative path for our public folder
-app.use(express.static(__dirname  + 'public'));
+app.use('/public', express.static('./public'));
 /*
 MIDDLEWARE FUNCTIONS
 Parse application body as JSON
